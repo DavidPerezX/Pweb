@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icono de la pestaña -->
+    <link rel="shortcut icon" href="./images/taq.ico" type="image/x-icon" />
+    <!-- importacion del css -->
+    <link rel="stylesheet" href="stylesprom.css">
+    <title>Taquín Promociones</title>
+</head>
+
+<!-- El body contenido en un grid -->
+<body class="grid-container">
+    <header class="header">  <!-- header con el nav integrado -->
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links"> <!-- enlaces del nav -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Menu.html">La Carta</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a class="current_tab" href="#">Promociones</a></li>
+            </ul>
+        </nav>
+        <!-- boton de reserva -->
+        <a class="cta" href="reserva.html"><button>Reserva</button></a>
+    </header>
+    <div class="main_title"> <!-- contenedor para el mensaje de bienvenida -->
+        <div class="flip_letters"> <!-- div con la animación -->
+            <span style="--i:1">P</span>
+            <span style="--i:2">r</span>
+            <span style="--i:3">o</span>
+            <span style="--i:4">m</span>
+            <span style="--i:5">o</span>
+            <span style="--i:6">c</span>
+            <span style="--i:7">i </span>
+            <span style="--i:8">o</span>
+            <span style="--i:9">n</span>
+            <span style="--i:10">e</span>
+            <span style="--i:11">s</span>
+        </div>
+    </div>
+    <div class="main">
+        <section class="title">
+            <p class="tl">
+                <span>Rewards</span>
+            </p>
+        </section>
+        <section class="description_container"id="rewards">  <!-- id que enlaza el footer con la sección -->
+            <p>Taquín rewards es una forma de premiar tu lealtad, solicita tu tarjeta de lealtad y asciende de rango obteniendo mejores beneficios.</p>
+            <p>Acumula tus puntos anualmente para subir de rango.</p>
+        </section>
+        <div class="card_bx">
+            <div class="container">
+                <div class="card_member">
+                    <div class="card_imagem card_silver"></div>
+                    <h2>Miembro Silver</h2>
+                    <ul> <!-- descripciones de los beneficios-->
+                        <li>1 postre al mes</li>
+                        <li>1 cerveza al mes</li>
+                        <li>5% de descuento en una comida al mes</li>
+                    </ul>  
+                    <p class="price">0-500 pts</p> <!-- puntos requeridos -->
+                </div>
+                <div class="card_member">
+                    <div class="card_imagem card_gold"></div>
+                    <h2>Miembro Gold</h2>
+                    <ul>
+                        <li>1 entrada de la carta al mes</li>
+                        <li>1 tarro de cerveza al mes</li>
+                        <li>10% de descuento en una comida al mes</li>
+                    </ul> 
+                    <p class="price">600-900 pts</p>
+                </div>
+                <div class="card_member">
+                    <div class="card_imagem card_platino"></div>
+                    <h2>Miembro Platino</h2>
+                    <ul>
+                        <li>1 postre al mes</li>
+                        <li>1 comida en tu cumpleaños</li>
+                        <li>1 tarro de cerveza al mes</li>
+                        <li>10% de descuento en cada comida</li>
+                    </ul> 
+                    <p class="price">+1000 pts</p>
+                </div>
+            </div>
+        </div>
+        <section class="title">
+            <p class="tl">
+                <span>Otras Promociones</span>
+            </p>
+        </section>
+        <div class="card_bx">
+            <div class="container">
+                <div class="card">
+                    <div class="card_image card_birth"></div>
+                    <h2>Cumpleaños</h2>
+                    <p>Si presentas tu INE, el día de tu cumpleaños te regalamos un pastelito y una sopresa</p>
+                </div>
+                <div class="card">
+                    <div class="card_image card_reto"></div>
+                    <h2>Reto de los 35 tacos</h2>
+                    <p>Si te comes 35 tacos en menos de 1 hora, te regalamos una comida al mes gratis por dos años</p>
+                </div>
+                <div class="card">
+                    <div class="card_image card_party"></div>
+                    <h2>Celebra tus eventos</h2>
+                    <p>Si tienes un evento especial, nosotros lo organizamos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"> <!-- contenedor del footer -->
+        <div class="f-container">
+            <div class="row">
+                <div class="footer-column">
+                    <h4>Taquín</h4>
+                    <ul>
+                        <li><a href="Galeria.html">Nosotros</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al cliente</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Facturas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Taquin Rewards</h4>
+                    <ul>
+                        <li><a href="promo.html#rewards">Taquin Rewards</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Más Información</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>siguenos</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <div class="data"><a href="">David Pérez Xolocotzi</a></div>
+        <div class="data_gp">
+            <p>1559 Programación web 1</p>
+        </div>
+        <div class="data_gp">
+            <p>Copyright © 2021</p>
+        </div>
+    </footer>
+</body>
+
+</html>

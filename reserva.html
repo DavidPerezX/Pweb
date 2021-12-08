@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icono de la pestaña -->
+    <link rel="shortcut icon" href="./images/taq.ico" type="image/x-icon" />
+    <!-- importacion del css -->
+    <link rel="stylesheet" href="styleres.css">
+    <title>Taquín reserva</title>
+</head>
+
+<!-- El body contenido en un grid -->
+<body class="grid-container">
+    <header class="header"> <!-- header con el nav integrado -->
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links"> <!-- enlaces del nav -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Menu.html">La Carta</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="promo.html">Promociones</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="check.js"></script> <!-- script de validación del formulario -->
+    <div class="main">
+        <section class = "m_container">
+            <div class = "card_container">  <!-- contenedor del formulario de reserva-->
+                <div class = "card_image">  <!-- imagen del formulario-->
+                </div>
+                <div class = "content">  <!-- contenido del formulario-->
+                    <h3>Reserva ahora</h3>
+                    <form name = "form" onSubmit ="return validar()">
+                        <div class = "f_row">
+                            <input type="date" id='current-date'>
+                            <!-- script para poner por defecto la fecha del día de hoy basado en el GTM -->
+                            <script >const element = document.getElementById('current-date');
+                                element.valueAsNumber = Date.now()-(new Date()).getTimezoneOffset()*60000;</script>
+                            <select name = "hours">
+                                <option value = "">Elige la hora</option>
+                                <option value = "13">13 : 00</option>
+                                <option value = "14">14 : 00</option>
+                                <option value = "15">15 : 00</option>
+                                <option value = "16">16 : 00</option>
+                                <option value = "17">17 : 00</option>
+                                <option value = "18">18 : 00</option>
+                                <option value = "19">19 : 00</option>
+                                <option value = "19">20 : 00</option>
+                                <option value = "19">21 : 00</option>
+                                <option value = "19">22 : 00</option>
+                                <option value = "19">23 : 00</option>
+                            </select>
+                        </div>
+
+                        <div class = "f_row">
+                            <input type = "text" name = "name" placeholder="Nombre completo" >
+                            <input type = "text" name = "phone" placeholder="Teléfono de contacto" >
+                        </div>
+
+                        <div class = "f_row">
+                            <select name = "persons">
+                                <option value = "">Núm. personas</option>
+                                <option value = "1">1</option>
+                                <option value = "2">2</option>
+                                <option value = "3">3</option>
+                                <option value = "4">4</option>
+                                <option value = "5">5</option>
+                                <option value = "6">6</option>
+                                <option value = "7">7</option>
+                                <option value = "8">8</option>
+                                <option value = "9">9</option>
+                                <option value = "10">10</option>
+                            </select> 
+                            <input type = "submit" value = "RESERVAR">  <!-- submit para reservar -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer"> <!-- contenedor del footer -->
+        <div class="f-container">
+            <div class="row">
+                <div class="footer-column">
+                    <h4>Taquín</h4>
+                    <ul>
+                        <li><a href="Galeria.html">Nosotros</a></li>
+
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al cliente</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Facturas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Taquin Rewards</h4>
+                    <ul>
+                        <li><a href="promo.html#rewards">Taquin Rewards</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Más informacion</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>siguenos</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <div class="data"><p><a href="#">David Pérez Xolocotzi</a><br>1559 Programación web 1<br>Copyright © 2021</p></div>
+    </footer>
+</body>
+
+</html>

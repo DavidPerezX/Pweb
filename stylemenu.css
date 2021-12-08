@@ -1,0 +1,597 @@
+
+/* estilos generales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    
+}
+
+body {
+    min-height: 100%;
+    background-color:#2d2f35;
+}
+
+/* Estilos del scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#212225;
+    border-radius:5px;
+}
+
+
+/* estilos del grid general */
+.grid-container >*{
+    border-radius:4px;
+    padding: 5px;
+    margin:0;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main_title{
+    grid-area: main_title;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "header"
+        "main_title"
+        "main"
+        "footer";
+}
+
+
+@media(min-width:300px){
+    .grid-container{
+    grid-template:
+        "header" auto
+        "main_title" auto
+        "main" auto
+        "footer" auto
+        ;
+    }
+}
+
+@media(max-width:425px){
+    html{
+        zoom:60%;
+    }
+}
+
+
+/* estilos del header y el nav */
+
+header {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 5px 10% ;
+    
+    background-color: rgb(255, 242, 67);
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.current_tab{
+    color: rgb(117, 107, 16);
+}
+.header li, a, button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size:16px;
+    color:#24262b;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display:inline-block;
+    padding: 0px 10px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #f05353;
+    padding-right: 5px;
+    font-weight:500;
+}
+
+.header button{
+    margin-right: 20px;
+    padding: 9px 25px 10px;
+    background-color: #f1f0e3;
+    border:none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header button:hover{
+    background-color: #2c2d31;
+    color: #fff;
+    padding-bottom: 1%;
+    padding-top: 0.1px;
+    transition: all 0.9s ease 0s;
+}
+
+@media(min-width:300px){
+    .header button{
+        margin-right: 10px;
+    }
+}
+
+/* estilos del encabezado principal */
+
+.main_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+/* estilos de las letras giratorias */
+.flip_letters {
+    position: relative;
+}
+
+.flip_letters span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform:capitalize;
+    animation: flip 5s infinite;
+    animation-delay: calc(.1s * var(--i))
+}
+
+/* keyframe para animación de letras */
+@keyframes flip {
+    0%,30% {
+    transform: rotateY(360deg) 
+    }
+}
+
+/* estilos de las cabeceras de los menús */
+.title{
+    background-color:#24262b;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    margin-top: 15px;
+}
+.tl {
+    display: block;
+    height: 30px;
+    border-bottom: solid 2px rgb(180, 163, 10);
+    margin-bottom:15px;
+    text-align: center;
+}
+
+.tl span {
+    display: inline-block;
+    background-color:#24262b;
+
+    padding: 0 5px;
+    justify-content:center;
+    text-align: center;
+    font-size:19px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+
+/* estilos caja de tarjetas menu */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #24262b;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px  ;
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: #33353a;
+    transform: scale(1.02);
+}
+
+.card h2{
+    font-size:19px;
+}
+
+.card h2,p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+
+.price{
+    margin-top: 5px;;
+    color: #f1d028;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;;
+}
+
+.card_image{
+    height: 180px;
+    margin-bottom: 5px;
+    background-size:cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0 ;
+}
+
+/* imágenes de las tarjetas */
+.card_sopa{
+    background-image: url("https://cdn.pixabay.com/photo/2020/08/13/10/39/meal-5484816_960_720.jpg")
+}
+
+.card_guacamole{
+    background-image: url("https://images.pexels.com/photos/5695878/pexels-photo-5695878.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+.card_totopos{
+    background-image: url("https://images.pexels.com/photos/6004195/pexels-photo-6004195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+.card_chicharron{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PNh_W08AiHXPWWzkCpWYYAHaE8%26pid%3DApi&f=1")
+}
+
+.card_quesadilla{
+    background-image: url("https://images.pexels.com/photos/7601331/pexels-photo-7601331.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_quescam{
+    background-image: url("https://images.pexels.com/photos/8448331/pexels-photo-8448331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+.card_costra{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.jNSmPISnkvqScMBJhdn2oAHaGx%26pid%3DApi&f=1")
+}
+
+.card_azteca{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.U9TZa4S6Rn2hlu2FZEtoOwHaE8%26pid%3DApi&f=1")
+}
+
+.card_pastor{
+    background-image: url("https://media.istockphoto.com/photos/tacos-to-the-shepherd-picture-id1165215190?b=1&k=20&m=1165215190&s=170667a&w=0&h=YT9me3FOoyNspoN8Ilu1F13AVABuC3HQz_99IuwZr30=")
+}
+
+.card_arrachera{
+    background-image: url("https://media.istockphoto.com/photos/three-carne-asada-mexican-street-tacos-in-corn-tortilla-with-lime-picture-id1272532786?b=1&k=20&m=1272532786&s=170667a&w=0&h=A9vIzqorCIquAwtRDq0lQ14bMmzHOrcS5cJD92af6IY=")
+}
+
+.card_pechuga{
+    background-image: url("https://cdn.pixabay.com/photo/2017/12/27/04/28/tortilla-3041938__340.jpg")
+}
+
+.card_suadero{
+    background-image: url("https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGFjb3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_picadillo{
+    background-image: url("https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHRhY29zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_pescado{
+    background-image: url("https://images.pexels.com/photos/8448325/pexels-photo-8448325.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_campechano{
+    background-image: url("https://images.unsplash.com/photo-1564767655658-4e6b365884ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHRhY29zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_longaniza{
+    background-image: url("https://images.pexels.com/photos/8230019/pexels-photo-8230019.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_cecina{
+    background-image: url("https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHRhY29zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_deshebrada{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-tWQ52jNTaFA%2FUHGwnzAf_tI%2FAAAAAAAAEnE%2FCG-T8rG1OZE%2Fs1600%2Fshredded%2Bbeef%2Btacos.JPG&f=1&nofb=1")
+}
+
+.card_parrillada{
+    background-image: url("https://images.pexels.com/photos/7772198/pexels-photo-7772198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+.card_bbq{
+    background-image: url("https://images.unsplash.com/photo-1566740932818-cacfb780ae18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHRhY29zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_taquiza{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.melodijolola.com%2Fmedia%2Ffiles%2Fstyles%2Fnota_imagen%2Fpublic%2Ffield%2Fimage%2Fcomo_hacer_tacos_al_pastor_en_casa.jpg&f=1&nofb=1")
+}
+
+.card_barbacha{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.ZoCRin3Gsy90DJo-vvIicAHaEK%26pid%3DApi&f=1")
+}
+
+.card_bcochinita{
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/13/03/56/grilled-pineapple-pork-burrito-2944562_960_720.jpg")
+}
+.card_alambre{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Frecetasmexicanas.org%2Fwp-content%2Fuploads%2F2019%2F05%2Falambre.jpg&f=1&nofb=1")
+}
+
+.card_veggie{
+    background-image: url("https://images.unsplash.com/photo-1511690078903-71dc5a49f5e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fG1leGljYW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_mixiote{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.gdn0wUF7VAsFL_6Iym7LmwHaE7%26pid%3DApi&f=1")
+}
+
+.card_chilen{
+    background-image: url("https://images.unsplash.com/photo-1588274347149-9c02f0cf05ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+}
+
+.card_paella{
+    background-image: url("https://media.istockphoto.com/photos/traditional-spanish-seafood-paella-in-pan-with-chickpeas-shrimps-on-picture-id1324795440?b=1&k=20&m=1324795440&s=170667a&w=0&h=HJGdnn5m-J5HU-6GboSNO6iPEfmqMiEyJV0rq7gt-CQ=")
+}
+
+.card_torta{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YCDjjIc-pB39aPUbF4ArjwHaE8%26pid%3DApi&f=1")
+}
+
+.card_volcan{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F50%2F90%2F12%2F50901233490ad9220670038ac259cbc1.jpg&f=1&nofb=1")
+}
+
+.card_gringa{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Flopezdoriga.com%2Fwp-content%2Fuploads%2F2017%2F08%2Fgringas.jpg%3Fssl%3D1&f=1&nofb=1")
+}
+
+.card_eCasa{
+    background-image: url("https://images.unsplash.com/photo-1621634892819-80f7874c96dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHNhbGFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_majestic{
+    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHNhbGFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_frojos{
+    background-image: url("https://images.unsplash.com/photo-1582572358586-7cd1c5dbfa9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fHNhbGFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_antio{
+    background-image: url("https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+}
+
+.card_verde{
+    background-image: url("https://images.unsplash.com/photo-1572357176061-7c96fd2af22f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHNhbGFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_horchata{
+    background-image: url("https://images.pexels.com/photos/5946635/pexels-photo-5946635.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_jamaica{
+    background-image: url("https://cdn7.kiwilimon.com/recetaimagen/3630/640x426/th5-640x426-15252.jpg.webp")
+}
+
+.card_bkbeer{
+    background-image: url("https://images.pexels.com/photos/1089932/pexels-photo-1089932.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_tarro{
+    background-image: url("https://images.unsplash.com/photo-1586993451228-09818021e309?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_boing{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.bb8814XCF0ONsPSfyRP_wwHaHS%26pid%3DApi&f=1")
+}
+
+.card_refresco{
+    background-image: url("https://pbs.twimg.com/profile_images/1349020259144052738/4VgvQMQf_400x400.jpg")
+}
+.card_bbeer{
+    background-image: url("https://images.pexels.com/photos/667986/pexels-photo-667986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_limonada{
+    background-image: url("https://cdn.pixabay.com/photo/2015/08/25/16/12/lime-907124__340.jpg")
+}
+
+.card_naranjada{
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/08/13/12/drink-3301193__340.jpg")
+}
+
+/* postres */
+
+.card_chees{
+    background-image: url("https://images.pexels.com/photos/3185509/pexels-photo-3185509.png?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_flan{
+    background-image: url("https://images.unsplash.com/photo-1579633527663-323f4ec6abde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZsYW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60")
+}
+
+.card_helado{
+    background-image: url("https://cdn.pixabay.com/photo/2017/04/18/15/10/strawberry-ice-cream-2239377__340.jpg")
+}
+
+.card_crepas{
+    background-image: url("https://cdn.pixabay.com/photo/2018/11/09/14/27/dessert-3804693__340.jpg")
+}
+
+.card_elotes{
+    background-image: url("https://images.unsplash.com/photo-1570716774271-ab30ad4924a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+}
+
+
+/* estilos del footer */
+.footer{
+    background-color: #24262b;
+    padding: 25px 0; 
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.f-container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display:flex;
+    flex:wrap;
+}
+
+.footer-column{
+    width:25%;
+    padding:0 15px;
+}
+
+.footer-column h4{
+    font-size: 17px;
+    color: #fdf5cf;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight:400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-column h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9e61e;
+    height:2px;
+    box-sizing: border-box;
+    width:70px;
+}
+
+.footer-column ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a{
+    font-size:14px ;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #bbbbbb;
+    display:block;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.footer-column ul li a:hover{
+    color: rgb(250, 240, 95);
+    padding-left: 5px;
+}
+
+.footer-column .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255,255,255,0.2);
+    margin-right:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50%;
+    color: #fff ;
+}
+
+.footer-column .social-links a:hover{
+    color: #24262b;
+    background-color:#ffffff;
+
+}
+
+
+.data {
+    margin-top: 22px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.data_gp p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:13px;
+    color: #bbbbbb;
+    font-weight:500;
+}
+
+.data a{
+    text-decoration: none;
+    color:#a5a5a5;
+}
+
+.data a:hover{
+    color:#e9e61e;
+}
+
+
+@media(max-width:768px){
+    .footer-column{
+        width: 50%;
+        padding: 30px;
+    }
+}
+
+@media(max-width:300px){
+    .footer-column{
+        width: 100%;
+    }
+}
+
+

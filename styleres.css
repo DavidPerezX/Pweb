@@ -1,0 +1,338 @@
+
+/* Estilos generales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color:#2d2f35;  
+}
+
+/* Estilos del scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#212225;
+    border-radius:5px;
+}
+
+/*Estilos del grid general*/
+
+.grid-container >*{
+    border-radius:4px;
+    padding: 10px;
+}
+
+/* asignacion de las areas del grid */
+.header{
+    grid-area: header;
+    background-color: rgb(255, 242, 67);
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.main{
+    grid-area: main;
+}
+
+
+.footer{
+    grid-area: footer;
+    margin-top:50px;
+    width: 100%;
+    position: relative;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+/* uso de mediaquerys personalizados para distintas dimensiones de pantallas */
+@media(min-width:300px){
+    .grid-container{
+    grid-template:
+        "header" auto
+        "main"  auto
+        "footer" auto
+        ;
+    }
+}
+
+@media(max-width:425px){
+    html{
+        zoom:60%;
+    }
+}
+
+
+/* estilos del header y el nav */
+
+header {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 5px 10% ;
+}
+
+.current_tab{
+    color: rgb(117, 107, 16);
+}
+
+.header li, a, button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size:16px;
+    color:#24262b;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display:inline-block;
+    padding: 0px 10px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #f05353;
+    padding-right: 5px;
+    font-weight:500;
+}
+
+
+
+/* estilos del contenedor del formulario */
+.m_container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.card_container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card_image{
+    background: url("https://images.unsplash.com/photo-1564036003763-0e65aaebd0dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:5px;
+}
+.content{
+    background:#24262b;
+    height: 330px;
+    border-radius:5px;
+}
+.content h3{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(216, 216, 216);
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.f_row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #888787;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+form input[type = submit]{
+    color: #1f1616;
+    background: #f3f732;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form input[type = submit]:hover{
+    color: rgb(253, 233, 53);
+    background-color: #1f1616;
+    animation-timing-function:ease-in-out;
+}
+
+@media(max-width: 990px){
+    .card_container{
+        grid-template-columns: 100%;
+    }
+    .card_image{
+        height: 320px;
+    }
+}
+
+
+/* estilos del footer */
+.footer{
+    background-color: #24262b;
+    width: 100%;
+    padding: 25px 0;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.f-container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display:flex;
+    flex:wrap;
+}
+
+.footer-column{
+    width:25%;
+    padding:0 15px;
+}
+
+.footer-column h4{
+    font-size: 17px;
+    color: #fdf5cf;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight:400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-column h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9e61e;
+    height:2px;
+    box-sizing: border-box;
+    width:70px;
+} 
+
+.footer-column ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a{
+    font-size:14px ;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #bbbbbb;
+    display:block;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.footer-column ul li a:hover{
+    color: rgb(250, 240, 95);
+    padding-left: 5px;
+}
+
+.footer-column .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255,255,255,0.2);
+    margin-right:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50%;
+    color: #fff ;
+}
+
+.footer-column .social-links a:hover{
+    color: #24262b;
+    background-color:#ffffff;
+
+}
+
+.data{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.data p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:13px;
+    margin-top: 35px;
+    color: #bbbbbb;
+    font-weight:500;
+}
+
+.data a{
+    text-decoration: none;
+    color:#a5a5a5;
+}
+.data a:hover{
+    color:#e9e61e;
+}
+
+@media(max-width:768px){
+    .footer-column{
+        width: 50%;
+        padding: 30px;
+    }
+}
+
+@media(max-width:300px){
+    .footer-column{
+        width: 100%;
+    }
+}
+
+
+
+

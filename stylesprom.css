@@ -1,0 +1,476 @@
+
+/* Estilos generales */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color:#2d2f35;
+}
+
+/* Estilos del scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:#212225;
+    border-radius:5px;
+}
+
+
+/* estilos del grid general */
+.grid-container >*{
+    border-radius:4px;
+    padding: 5px;
+    margin:0;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main_title{
+    grid-area: main_title;
+}
+
+.main{
+    grid-area: main;
+}
+
+
+.footer{
+    grid-area: footer;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "header"
+        "main_title"
+        "main"
+        "footer";
+}
+
+
+@media(min-width:300px){
+    .grid-container{
+    grid-template:
+        "header" auto
+        "main_title" auto
+        "main" auto
+        "footer" auto
+        ;
+    }
+}
+
+@media(max-width:425px){
+    html{
+        zoom:60%;
+    }
+}
+
+
+/* estilos del header y el nav */
+
+header {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 5px 10% ;
+    background-color: rgb(255, 242, 67);
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
+.current_tab{
+    color: rgb(117, 107, 16);
+}
+.header li, a, button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size:16px;
+    color:#24262b;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display:inline-block;
+    padding: 0px 10px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #f05353;
+    padding-right: 5px;
+    font-weight:500;
+}
+
+.header button{
+    margin-right: 20px;
+    padding: 9px 25px 10px;
+    background-color: #f1f0e3;
+    border:none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.header button:hover{
+    background-color: #2c2d31;
+    color: #fff;
+    padding-bottom: 1%;
+    padding-top: 0.1px;
+    transition: all 0.9s ease 0s;
+}
+
+@media(min-width:300px){
+    .header button{
+        margin-right: 10px;
+    }
+}
+
+/* estilos del encabezado principal */
+
+.main_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+.flip_letters {
+    position: relative;
+}
+.flip_letters span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    animation-delay: calc(.1s * var(--i));
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform:capitalize;
+    animation: flip 5s infinite;
+    
+}
+
+/* keyframe de la animación */
+@keyframes flip {
+    0%,30% {
+    transform: rotateY(360deg) 
+    }
+}
+
+/* estilos de las cabeceras */
+.title{
+    background-color:#24262b;
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    margin-top: 15px;
+}
+.tl {
+    display: block;
+    height: 30px;
+    border-bottom: solid 2px rgb(180, 163, 10);
+    margin-bottom:15px;
+    text-align: center;
+}
+
+.tl span {
+    display: inline-block;
+    background-color:#24262b;
+    padding: 0 5px;
+    justify-content:center;
+    text-align: center;
+    font-size:19px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+/* contenedor de la descripción del rewards */
+.description_container p {
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    font-size:19px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+/* estilos caja de tarjetas */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_member {
+    background-color: #24262b;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px  ;
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card_member:hover{
+    cursor: pointer;
+    background-color: #33353a;
+    transform: scale(1.02);
+}
+
+.card_member h2{
+    font-size:19px;
+}
+
+.card_member h2,p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+.card_member ul, li{
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4;
+}
+
+.price{
+    margin-top: 5px;;
+    color: #f1d028;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;;
+}
+
+.card_imagem{
+    height: 190px;
+    margin-bottom: 5px;
+    background-size:100%;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0 ;
+}
+
+
+.card {
+    background-color: #24262b;
+    width: 250px;
+    margin: 10px;
+    border-radius: 10px  ;
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: #33353a;
+    transform: scale(1.02);
+}
+
+.card h2{
+    font-size:19px;
+}
+
+.card h2,p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#e3e3e4
+}
+
+.card p{
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.card_image{
+    height: 180px;
+    margin-bottom: 5px;
+    background-size:cover;
+    border-radius: 10px 10px 0 0 ;
+}
+
+
+.card_gold{
+    background-image: url("./images/gold.jpg")
+}
+
+.card_platino{
+    background-image: url("./images/platino.jpg")
+}
+
+.card_silver{
+    background-image: url("./images/silver.jpg")
+}
+.card_reto{
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.cocinadelirante.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fgallerie%2Fpublic%2Fimages%2F2016%2F08%2Ftacosalpastor.jpg&f=1&nofb=1")
+}
+.card_party{
+    background-image: url("https://images.pexels.com/photos/7016482/pexels-photo-7016482.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+.card_birth{
+    background-image: url("https://images.pexels.com/photos/7772331/pexels-photo-7772331.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+}
+
+
+
+/* estilos del footer */
+.footer{
+    background-color: #24262b;
+    padding: 25px 0; 
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.f-container{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.row{
+    display:flex;
+    flex:wrap;
+}
+
+.footer-column{
+    width:25%;
+    padding:0 15px;
+}
+
+.footer-column h4{
+    font-size: 17px;
+    color: #fdf5cf;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight:300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-column h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e9e61e;
+    height:2px;
+    box-sizing: border-box;
+    width:70px;
+}
+
+.footer-column ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a{
+    font-size:14px ;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #bbbbbb;
+    display:block;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.footer-column ul li a:hover{
+    color: rgb(250, 240, 95);
+    padding-left: 5px;
+}
+
+.footer-column .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgba(255,255,255,0.2);
+    margin-right:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius:50%;
+    color: #fff ;
+}
+
+.footer-column .social-links a:hover{
+    color: #24262b;
+    background-color:#ffffff;
+}
+
+
+.data {
+    margin-top: 22px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.data_gp p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:13px;
+    color: #bbbbbb;
+    font-weight:500;
+    text-align: center;
+    justify-content: center;
+}
+
+.data a{
+    text-decoration: none;
+    color:#a5a5a5;
+}
+
+.data a:hover{
+    color:#e9e61e;
+}
+
+
+@media(max-width:768px){
+    .footer-column{
+        width: 50%;
+        padding: 30px;
+    }
+}
+
+@media(max-width:300px){
+    .footer-column{
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+}
+
+
+

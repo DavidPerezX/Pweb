@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icono de la pestaña -->
+    <link rel="shortcut icon" href="./images/taq.ico" type="image/x-icon" />
+    <!-- importacion del css -->
+    <link rel="stylesheet" href="stylemenu.css">
+    <title>Taquín menú</title>
+</head>
+
+<!-- El body contenido en un grid -->
+
+<body class="grid-container">
+    <header class="header"> <!-- header con el nav integrado -->
+        <a class="logo" href="index.html"><img src="images/logo.png" alt="logo"></a>
+        <nav>
+            <ul class="nav__links"> <!-- enlaces del nav -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="current_tab" href="Menu.html">La Carta</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="promo.html">Promociones</a></li>
+            </ul>
+        </nav>
+        <!-- boton de reserva -->
+        <a class="cta" href="reserva.html"><button>Reserva</button></a>
+    </header>
+
+    <div class="main_title"> <!-- contenedor para el mensaje de bienvenida -->
+        <div class="flip_letters"> <!-- contenedor de los span que contienen las letras giratorias -->
+            <span style="--i:1">C</span>
+            <span style="--i:2">o</span>
+            <span style="--i:3">n</span>
+            <span style="--i:4">o</span>
+            <span style="--i:5">c</span>
+            <span style="--i:6">e</span>
+            <span style="--i:7"> </span>
+            <span style="--i:8"> </span>
+            <span style="--i:9">e</span>
+            <span style="--i:10">l</span>
+            <span style="--i:11"> </span>
+            <span style="--i:12"> </span>
+            <span style="--i:13">m</span>
+            <span style="--i:14">e</span>
+            <span style="--i:15">n</span>
+            <span style="--i:16">ú</span>
+        </div>
+    </div>
+    <div class="main">
+    <section class="title">
+        <p class="tl"> <!-- Titulos de categoria -->
+            <span>Entradas</span>
+        </p>
+    </section>
+    <div class="card_bx"> <!--  contenedor de las tarjetas del menú -->
+        <div class="container"> <!--  cajas individuales de las tarjetas del menú -->
+            <div class="card"> <!--  cada tarjeta contiene su referencia a su respectiva imagen y la descripción del platillo -->
+                <div class="card_image card_sopa"></div>
+                <h2>Frijoles Charros</h2>  <!-- descripción de los platillos -->
+                <p>Frijoles charros al estilo norteño.</p>
+                <p >225 gramos </p>  <!-- descripción de las cantidades-->
+                <p class="price">$25.00 mxn</p> <!-- precio de los platillos -->
+            </div>
+            <div class="card">
+                <div class="card_image card_guacamole"></div>
+                <h2>Guacamole</h2>
+                <p>Acompañado con totopos </p>
+                <p >325 gramos </p> 
+                <p class="price">$45.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_totopos"></div>
+                <h2>Orden totopos</h2>
+                <p> Totopos para compartir acompañados de un par de dips</p>
+                <p >225 gramos </p> 
+                <p class="price">$25.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_chicharron"></div>
+                <h2>Orden de chicharrón</h2>
+                <p>Ideal para compartir en pareja</p> 
+                <p>205 gramos </p> 
+                <p class="price">$30.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_quesadilla"></div>
+                <h2>Orden de 3 quesadillas</h2>
+                <p>Hechas en el comal con masa azul</p>
+                <p >225 gramos </p> 
+                <p class="price">$45.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_quescam"></div>
+                <h2>Quesadillas de camarón</h2>
+                <p>5 quesadillitas</p>
+                <p >275 gramos </p> 
+                <p class="price">$65.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_costra"></div>
+                <h2>Costra</h2>
+                <p>Costra de queso</p>
+                <p >225 gramos </p> 
+                <p class="price">$50.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_azteca"></div>
+                <h2>Sopa azteca</h2>
+                <p>El sabor de México hecho sopa</p>
+                <p >375 ml </p> 
+                <p class="price">$37.00 mxn</p>
+            </div>
+        </div>
+    </div>
+    <section class="title">
+        <p class="tl">
+            <span id="tacos">Tacos</span> <!--  Se utiliza el id para referenciar con las imagenes de la galeria de inicio -->
+        </p>
+    </section>
+    <div class="card_bx">
+        <div class="container">
+            <div class="card">
+                <div class="card_image card_pastor"></div>
+                <h2>Tacos de pastor</h2>
+                <p>Orden de 4 tacos</p>
+                <p >325 gramos </p> 
+                <p class="price">$60.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_arrachera"></div>
+                <h2>Tacos de arrachera</h2>
+                <p>Orden de 3 tacos</p>
+                <p >355 gramos </p> 
+                <p class="price">$85.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_pechuga"></div>
+                <h2>Tacos de pechuga de pollo</h2>
+                <p>Orden de 4 tacos</p>
+                <p >355 gramos </p>
+                <p class="price">$65.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_suadero"></div>
+                <h2>Tacos de suadero</h2>
+                <p> Orden de 4 tacos</p> 
+                <p>325 gramos </p> 
+                <p class="price">$60.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_picadillo"></div>
+                <h2>Tacos de picadillo</h2>
+                <p> Orden de 3 tacos</p> 
+                <p>325 gramos </p>
+                <p class="price">$45.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_pescado"></div>
+                <h2>Tacos de pescado</h2>
+                <p> Orden de 3 tacos</p> 
+                <p>325 gramos </p>
+                <p class="price">$55.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_campechano"></div>
+                <h2>Tacos campechanos</h2>
+                <p> Orden de 4 tacos (res, chorizo)</p> 
+                <p>325 gramos </p>
+                <p class="price">$45.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_longaniza"></div>
+                <h2>Tacos de longaniza</h2>
+                <p> Orden de 4 tacos</p> 
+                <p>325 gramos </p>
+                <p class="price">$40.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_cecina"></div>
+                <h2>Tacos de cecina enchilada</h2>
+                <p> Orden de 5 tacos</p> 
+                <p>325 gramos </p>
+                <p class="price">$65.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_deshebrada"></div>
+                <h2>Tacos de carne deshebrada</h2>
+                <p> Orden de 3 tacos</p> 
+                <p>325 gramos </p>
+                <p class="price">$58.00 mxn</p>
+            </div>
+        </div>
+    </div>
+    <section class="title">
+        <p class="tl">
+            <span>Especialidades</span>
+        </p>
+    </section>
+    <div class="card_bx">
+        <div class="container">
+            <div class="card">
+                <div class="card_image card_parrillada" id="parrillada"></div>
+                <h2>Parrillada</h2>
+                <p>Ideal para compartir con 3 personas</p>
+                <p >625 gramos </p> 
+                <p class="price">$225.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_bbq"></div>
+                <h2>Tacos de Sirloin BBQ</h2>
+                <p>3 tacos de sirloin bañada en BBQ</p>
+                <p >225 gramos </p> 
+                <p class="price">$95.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_taquiza"></div>
+                <h2>Taquiza de pastor especial</h2>
+                <p>10 tacos de pastor</p>
+                <p >725 gramos </p> 
+                <p class="price">$135.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_barbacha"></div>
+                <h2>Barbacha para compartir</h2>
+                <p>Acompañado de 3 tortillas gigantes</p> 
+                <p>525 gramos </p> 
+                <p class="price">$200.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_alambre" id="alambre"></div>
+                <h2>Alambre para dos</h2>
+                <p>Acompañado de 6 tortillas de harina gigantes</p> 
+                <p>625 gramos </p> 
+                <p class="price">$180.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_bcochinita"></div>
+                <h2>Burrito de Cochinita</h2>
+                <p>Burrito gigante</p>
+                <p >225 gramos </p> 
+                <p class="price">$105.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_veggie"></div>
+                <h2>Parrillada Veggie</h2>
+                <p>Verduras asadas</p>
+                <p >425 gramos </p> 
+                <p class="price">$200.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_mixiote"></div>
+                <h2>Tacos de mixiote</h2>
+                <p>3 tacos</p>
+                <p >225 gramos </p> 
+                <p class="price">$96.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_chilen"></div>
+                <h2>Chile en nogada</h2>
+                <p>Con la famosa receta de Puebla</p>
+                <p >325 gramos </p> 
+                <p class="price">$100.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_paella"></div>
+                <h2>Paella</h2>
+                <p>El sabor de Valencia a tu mesa</p>
+                <p >525 gramos </p> 
+                <p class="price">$390.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_torta" id="torta"></div>
+                <h2>Torta al pastor</h2>
+                <p>Con quesillo y aguacate</p>
+                <p >325 gramos </p> 
+                <p class="price">$95.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_volcan" id="volcan"></div>
+                <h2>Volcanes</h2>
+                <p>2 tacos de carne con quesillo derretido</p>
+                <p >225 gramos </p> 
+                <p class="price">$75.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_gringa" id="gringa"></div>
+                <h2>Gringa al pastor</h2>
+                <p>Carne al pastor con quesillo derretido</p>
+                <p >125 gramos </p> 
+                <p class="price">$55.00 mxn</p>
+            </div>
+        </div>
+    </div>
+    <section class="title">
+        <p class="tl">
+            <span>Ensaladas</span>
+        </p>
+    </section>
+    <div class="card_bx">
+        <div class="container">
+            <div class="card">
+                <div class="card_image card_eCasa"></div>
+                <h2>Ensalada de la casa</h2>
+                <p>Lechuga,cebolla, rábano y manzana</p>
+                <p >205 gramos </p> 
+                <p class="price">$95.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_majestic"></div>
+                <h2>Ensalada Sebastian</h2>
+                <p>Huevos, pechuga,  tomate, </p>
+                <p >225 gramos </p> 
+                <p class="price">$105.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_frojos"></div>
+                <h2>Frutos rojos</h2>
+                <p>Fresa, cereza y germinado</p>
+                <p >225 gramos </p> 
+                <p class="price">$75.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_antio"></div>
+                <h2>La antioxidante</h2>
+                <p>Uvas, fresa, tomatillos y queso</p> 
+                <p>225 gramos </p> 
+                <p class="price">$120.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_verde"></div>
+                <h2>Verde</h2>
+                <p>Apio, brócoli, pepino y espinacas</p>
+                <p >245 gramos </p> 
+                <p class="price">$78.00 mxn</p>
+            </div>
+        </div>
+    </div>
+    <section class="title">
+        <p class="tl">
+            <span>Bebidas</span>
+        </p>
+    </section>
+    <div class="card_bx">
+        <div class="container">
+            <div class="card">
+                <div class="card_image card_horchata"></div>
+                <h2>Agua de horchata</h2>
+                <p>La tradicional receta mexicana.</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$25.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_jamaica"></div>
+                <h2>Agua de jamaica</h2>
+                <p>La tradicional receta mexicana.</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$25.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_bkbeer"></div>
+                <h2>Cubeta de cervezas</h2>
+                <p>6 cervezas</p>
+                <p class="gr">255 ml c/u </p> 
+                <p class="price">$130.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_tarro"></div>
+                <h2>Tarro de cerveza </h2>
+                <p>Cerveza de barril de la casa</p> 
+                <p>325 ml </p> 
+                <p class="price">$40.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_boing"></div>
+                <h2>Boing</h2>
+                <p>Guayaba, mango o tamarindo</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$25.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_refresco"></div>
+                <h2>Refrescos</h2>
+                <p>Cualquiera de la familia Coca-cola con re-fill</p>
+                <p class="price">$40.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_bbeer"></div>
+                <h2>Cerveza</h2>
+                <p>Heineken,Stella o Budweiser</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$39.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_limonada"></div>
+                <h2>Limonada</h2>
+                <p>Agua natural o mineral</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$35.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_naranjada"></div>
+                <h2>Naranjada</h2>
+                <p>Agua natural o mineral</p>
+                <p class="gr">255 ml </p> 
+                <p class="price">$35.00 mxn</p>
+            </div>
+        </div>
+    </div>
+    <section class="title">
+        <p class="tl">
+            <span>Postres</span>
+        </p>
+    </section>
+    <div class="card_bx">
+        <div class="container">
+            <div class="card">
+                <div class="card_image card_chees"></div>
+                <h2>Cheescake de la casa</h2>  
+                <p>Hecho con fruta natural; Fresa o zarzamora.</p>
+                <p >195 gramos </p> 
+                <p class="price">$95.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_flan"></div>
+                <h2>Rebanada de Flan</h2>
+                <p>Con la receta de doña Casilda</p>
+                <p >125 gramos </p> 
+                <p class="price">$65.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_helado"></div>
+                <h2>Helado de fresa casero</h2>
+                <p>Hecho en el momento con fruta natural</p>
+                <p >200 gramos </p> 
+                <p class="price">$39.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_crepas"></div>
+                <h2>Crepas</h2>
+                <p>Ideal para compartir en pareja</p> 
+                <p>175 gramos </p> 
+                <p class="price">$70.00 mxn</p>
+            </div>
+            <div class="card">
+                <div class="card_image card_elotes"></div>
+                <h2>Elote</h2>
+                <p>Con mayonesa, queso y chilito</p>
+                <p >75 gramos </p> 
+                <p class="price">$35.00 mxn</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--  sección del footer -->
+    <footer class="footer">
+        <div class="f-container">
+            <div class="row">
+                <div class="footer-column">
+                    <h4>Taquín</h4>
+                    <ul>
+                        <li><a href="Galeria.html">Nosotros</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Servicio al cliente</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Facturas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Taquin Rewards</h4>
+                    <ul>
+                        <li><a href="promo.html#rewards">Taquin Rewards</a></li>
+                        <li><a href="#">Mi cuenta</a></li>
+                        <li><a href="#">Más informacion</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>siguenos</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <div class="data"><a href="">David Pérez Xolocotzi</a></div>
+        <div class="data_gp"><p>1559 Programación web 1</p></div>
+        <div class="data_gp"><p>Copyright © 2021</p></div>
+    </footer>
+</body>
+</html>
